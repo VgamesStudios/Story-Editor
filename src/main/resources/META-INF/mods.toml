@@ -1,0 +1,38 @@
+# 模组加载器类型（Forge 固定为 javafml）
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+# 模组基本信息
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+description='''${mod_description}'''
+
+# ===== 依赖关系 =====
+
+# 依赖 Forge
+[[dependencies.${mod_id}]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+# 依赖 Minecraft
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+# 依赖前置模组 apricityui（请根据实际情况修改）
+[[dependencies.${mod_id}]]
+    modId="apricityui"
+    mandatory=true
+    versionRange="[1.1.6,)"
+    ordering="NONE"
+    side="BOTH"
