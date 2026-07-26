@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "minecraft:item/book_and_quill"
+    "layer0": "story_editor:item/story_editor"
   }
 }

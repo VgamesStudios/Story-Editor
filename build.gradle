@@ -3,6 +3,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = mod_version
@@ -31,7 +32,7 @@ allprojects {
 }
 
 minecraft {
-    mappings channel: mapping_channel, version: mapping_version
+    mappings channel: 'official', version: '1.20.1'
 
     copyIdeResources = true
 
@@ -91,10 +92,15 @@ repositories {
   }
   
 dependencies {
-    minecraft "net.minecraftforge:forge:1.20.1-47.4.10"
+    minecraft "net.minecraftforge:forge:1.20.1-47.4.20"
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation fg.deobf("com.sighs.apricityui:ApricityUI-forge:1.20.1-1.1.6-dev")
 }
-  
+
+mixin {
+    add sourceSets.main, "mixins.yourmodid.refmap.json"
+}
+
   tasks.named('processResources', ProcessResources).configure {
       var replaceProperties = [
               minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,

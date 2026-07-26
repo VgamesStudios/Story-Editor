@@ -1,9 +1,10 @@
 package com.story_editor;
 
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries; // 添加这个导入
+
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -14,7 +15,7 @@ import net.minecraft.client.Minecraft;
 public class StoryEditorItem extends Item {
     // ---------- 注册表 ----------
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(Registries.ITEM, "story_editor");
+            DeferredRegister.create(ForgeRegistries.ITEMS, "story_editor"); // 改为 ForgeRegistries.ITEMS
 
     // 注册物品本身
     public static final RegistryObject<Item> STORY_EDITOR_ITEM =
