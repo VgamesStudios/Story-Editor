@@ -1,0 +1,9 @@
+{
+  "itemGroup.story_editor.tab": "Story Editor",
+  "item.story_editor.story_editor": "Story Editor",
+  "gui.story_editor.mode_edit": "Edit",
+  "gui.story_editor.mode_catalog": "Catalog",
+  "gui.story_editor.mode_settings": "Settings",
+  "gui.story_editor.metadata": "Metadata",
+  "gui.story_editor.node": "Nodes"
+}

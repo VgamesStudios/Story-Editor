@@ -1,4 +1,9 @@
 {
   "itemGroup.story_editor.tab": "故事编辑器",
-  "item.story_editor.story_editor": "剧情编辑器"
+  "item.story_editor.story_editor": "剧情编辑器",
+  "gui.story_editor.mode_edit": "编辑",
+  "gui.story_editor.mode_catalog": "目录",
+  "gui.story_editor.mode_settings": "设置",
+  "gui.story_editor.metadata": "元数据",
+  "gui.story_editor.node": "节点"
 }
